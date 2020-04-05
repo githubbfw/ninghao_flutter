@@ -1,9 +1,15 @@
 
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/pages/basic_demo.dart';
 // import 'model/post.dart';
 import 'pages/listview_demo.dart';
 import "pages/drawer_demo.dart";
 import 'pages/bottomnavigationbardemo.dart';
+import 'pages/bottomnavigationbardemo.dart';
+import 'pages/boxdecoration.dart';
+import 'pages/layout_demo.dart';
+
+
 
 void main() => runApp(App());
 
@@ -68,10 +74,13 @@ class Home extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            listview_demo(),
+            Basic_Demo(),
+            // listview_demo(),
             // Icon(Icons.local_florist,size: 120,color: Colors.black12,),
-            Icon(Icons.change_history, size: 120,color: Colors.black12,),
-            Icon(Icons.directions_bike,size: 120, color: Colors.black12,)
+            BoxDecoration_Demo(),
+            LayoutDemo()
+            // Icon(Icons.change_history, size: 120,color: Colors.black12,),
+            // Icon(Icons.directions_bike,size: 120, color: Colors.black12,)
           ],
         ),
         drawer: DrawerDemo(),
