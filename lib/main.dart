@@ -8,6 +8,7 @@ import 'pages/bottomnavigationbardemo.dart';
 import 'pages/bottomnavigationbardemo.dart';
 import 'pages/boxdecoration.dart';
 import 'pages/layout_demo.dart';
+import 'pages/view_demo.dart';
 
 
 
@@ -36,7 +37,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -68,7 +69,8 @@ class Home extends StatelessWidget {
             tabs: <Widget>[
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.change_history)),
-              Tab(icon: Icon(Icons.directions_bike))
+              Tab(icon: Icon(Icons.directions_bike)),
+                 Tab(icon: Icon(Icons.view_quilt))
             ],
           ),
         ),
@@ -78,9 +80,10 @@ class Home extends StatelessWidget {
             // listview_demo(),
             // Icon(Icons.local_florist,size: 120,color: Colors.black12,),
             BoxDecoration_Demo(),
-            LayoutDemo()
+            LayoutDemo(),
             // Icon(Icons.change_history, size: 120,color: Colors.black12,),
             // Icon(Icons.directions_bike,size: 120, color: Colors.black12,)
+            View_Demo()
           ],
         ),
         drawer: DrawerDemo(),
