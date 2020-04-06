@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/pages/basic_demo.dart';
+import 'package:ninghao_flutter/pages/sliver_demo.dart';
 // import 'model/post.dart';
 import 'pages/listview_demo.dart';
 import "pages/drawer_demo.dart";
@@ -19,7 +20,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: Home(),
+      //这个是sliver 视图的学习布局
+      home: Sliver_Demo(),
+       
+       //这个是前几章的主要home（）
+      // home: Home(),
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5), //点击高亮的颜色
