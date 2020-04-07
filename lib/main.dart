@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/pages/basic_demo.dart';
+import 'package:ninghao_flutter/pages/form_demo.dart';
 import 'package:ninghao_flutter/pages/sliver_demo.dart';
 // import 'model/post.dart';
 import 'pages/listview_demo.dart';
@@ -11,6 +12,7 @@ import 'pages/boxdecoration.dart';
 import 'pages/layout_demo.dart';
 import 'pages/view_demo.dart';
 import 'pages/routes_demo.dart';
+import 'pages/form_demo.dart';
 
 
 
@@ -26,19 +28,31 @@ class App extends StatelessWidget {
 
        //这个是学习路由，routes 
       //  initialRoute: "/",
-       home:  RoutesDemo(),
-       routes: {
-        //  "/":  (context)=> Page(title: "AAAAA",),
-         "/about":( context)=>Page(title: "AAAAA",)
 
+   
+       //这个地方，我们添加一个form表单的学习
+      //  initialRoute: "/",
+        initialRoute: "/form",
+
+      //initialRoute: "/", 这句话，是跟home是有抵触的，所有在使用的时候，不能同时使用。
+      //  home:  RoutesDemo(),
+       routes: {
+       
+         //一进去就是表单界面
+        "/form": (context)=> FormDemo(),
+
+        //  "/":  (context)=> Page(title: "AAAAA",),
+        //  "/about":( context)=>Page(title: "AAAAA",)
+        
        },
        
        //这个是前几章的主要home（）
       // home: Home(),
       theme: ThemeData(
-          primarySwatch: Colors.yellow,
+          primarySwatch: Colors.yellow, 
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5), //点击高亮的颜色
-          splashColor: Colors.white70 //水波纹的颜色
+          splashColor: Colors.white70, //水波纹的颜色
+          accentColor: Color.fromRGBO(3, 54, 255, 1)
           ),
     );
   }
