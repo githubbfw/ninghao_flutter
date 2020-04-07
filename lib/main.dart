@@ -10,6 +10,7 @@ import 'pages/bottomnavigationbardemo.dart';
 import 'pages/boxdecoration.dart';
 import 'pages/layout_demo.dart';
 import 'pages/view_demo.dart';
+import 'pages/routes_demo.dart';
 
 
 
@@ -21,7 +22,16 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       //这个是sliver 视图的学习布局
-      home: Sliver_Demo(),
+      // home: Sliver_Demo(),
+
+       //这个是学习路由，routes 
+      //  initialRoute: "/",
+       home:  RoutesDemo(),
+       routes: {
+        //  "/":  (context)=> Page(title: "AAAAA",),
+         "/about":( context)=>Page(title: "AAAAA",)
+
+       },
        
        //这个是前几章的主要home（）
       // home: Home(),
