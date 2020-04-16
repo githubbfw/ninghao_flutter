@@ -13,6 +13,10 @@ import 'pages/layout_demo.dart';
 import 'pages/view_demo.dart';
 import 'pages/routes_demo.dart';
 import 'pages/form_demo.dart';
+ import 'pages/button_demo.dart';
+ import 'pages/bottom_sheetDemo.dart';
+ import 'pages/expansion_panel_demo.dart';
+ import 'pages/chip_demo.dart';
 
 
 
@@ -32,14 +36,30 @@ class App extends StatelessWidget {
    
        //这个地方，我们添加一个form表单的学习
       //  initialRoute: "/",
-        initialRoute: "/form",
+        // initialRoute: "/form",
+//        initialRoute:  "/button",
+//         initialRoute: "/bottom_sheet",
+          // initialRoute: "/expansion_panel_demo",
+            initialRoute: "/chip_demo",
 
       //initialRoute: "/", 这句话，是跟home是有抵触的，所有在使用的时候，不能同时使用。
       //  home:  RoutesDemo(),
        routes: {
        
          //一进去就是表单界面
-        "/form": (context)=> FormDemo(),
+        // "/form": (context)=> FormDemo(),
+
+        //按钮button的学习
+//        "/button":(context) => ButtonDemo()
+
+         //bottomsheet的学习
+////         "/bottom_sheet":(context) =>BottomSheetDemo(),
+
+         //expansion_panel的学习
+        //  "/expansion_panel_demo":(context) =>Expansion_Pane(),
+
+        //chip小碎片的学习
+        "/chip_demo":(context)=>ChipDemo(),
 
         //  "/":  (context)=> Page(title: "AAAAA",),
         //  "/about":( context)=>Page(title: "AAAAA",)

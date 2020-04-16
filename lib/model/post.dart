@@ -24,18 +24,18 @@ class Post{
 
   final List<Post> post = [
     Post(
-      title: "1111",
+      title: "aflaal;",
       auther: "2222",
       imageUrl: "https://www.baidu.com/img/baidu_jgylogo3.gif",
     ),
 
     Post(
-      title: "3333",
+      title: "aaa",
       auther: "4444",
       imageUrl: "https://www.baidu.com/img/baidu_jgylogo3.gif",
     ),
         Post(
-      title: "5555",
+      title: "aa",
       auther: "6666",
       imageUrl: "https://www.baidu.com/img/baidu_jgylogo3.gif",
     ),
