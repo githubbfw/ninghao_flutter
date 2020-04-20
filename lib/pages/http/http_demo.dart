@@ -44,12 +44,11 @@ class _HttpDemoHomeState extends State<HttpDemoHome> {
        if (response.statusCode ==200) {
          final responseBody =json.decode(response.body);
 
-          //  List<Post> posts = responseBody["posts"].map<Post>((item){
-          //    Post.fromJons(item);
-          //  }).toList();
+           List<Post> posts = (responseBody["posts"]).map<Post>((item){
+                Post.fromJons(item);
+           }).toList();
 
-
-      List<Post> posts = responseBody["posts"].map<Post>((item) =>Post.fromJons(item)).toList();
+      // List<Post> posts = (responseBody["posts"]as List).map<Post>((item) =>Post.fromJons(item)).toList();
 
          return posts;
          

@@ -125,7 +125,7 @@ final AnimationController animationController;
     return IconButton(
       icon: Icon(Icons.favorite),
       iconSize: animations[0].value,
-      color: animations[1].value,
+      color: animations[1].value, 
        onPressed: (){
          switch (animationController.status) {
              case AnimationStatus.completed:

@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:ninghao_flutter/pages/animation/animation_demo.dart';
 import 'package:ninghao_flutter/pages/basic_demo.dart';
 import 'package:ninghao_flutter/pages/form_demo.dart';
@@ -24,16 +27,31 @@ import 'pages/form_demo.dart';
   import 'pages/http/http_demo.dart';
   import 'pages/expansion_panel_demo.dart';
   import 'pages/animation/animation_demo2.dart';
+  import 'pages/il8n/il8n_demo.dart';
+
+
 
 
 
 void main() => runApp(App());
 
 class App extends StatelessWidget {
-  @override
+  @override   
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      // localeListResolutionCallback: (Locale locale,Iterable<Locale> supportedLocale){
+      //         return Locale("en","US");
+      // },
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale("en","US"),
+        Locale("zh","CN"),
+      ],
+
       //这个是sliver 视图的学习布局
       // home: Sliver_Demo(),
 
@@ -44,16 +62,17 @@ class App extends StatelessWidget {
        //这个地方，我们添加一个form表单的学习
       //  initialRoute: "/",
         // initialRoute: "/form",
-//        initialRoute:  "/button",
+      //  initialRoute:  "/button",
 //         initialRoute: "/bottom_sheet",
           // initialRoute: "/expansion_panel_demo",    
             // initialRoute: "/chip_demo",
             // initialRoute: "/statemanager_model_demo",
-
+      
         //  initialRoute: "/rxdart",    
-        //  initialRoute: "/http",  
+         initialRoute: "/http",  
         //  initialRoute: "/animation",  
-         initialRoute: "/animation2",  
+        //  initialRoute: "/animation2",  
+          //  initialRoute: "/il8n",  
 
       //initialRoute: "/", 这句话，是跟home是有抵触的，所有在使用的时候，不能同时使用。
       //  home:  RoutesDemo(),
@@ -63,7 +82,7 @@ class App extends StatelessWidget {
         // "/form": (context)=> FormDemo(),
 
         //按钮button的学习
-//        "/button":(context) => ButtonDemo()
+      //  "/button":(context) => ButtonDemo(),
 
          //bottomsheet的学习
 ////         "/bottom_sheet":(context) =>BottomSheetDemo(),
@@ -82,6 +101,9 @@ class App extends StatelessWidget {
         //  "/animation":(context)=>AnimationDemo(),
 
      "/animation2":(context)=>AnimationDemo2(),
+
+     //学习flutter 应用国际化
+     "/il8n":(context)=>Il8nDemo(),
 
 
         //  "/":  (context)=> Page(title: "AAAAA",),
