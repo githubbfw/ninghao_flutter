@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/pages/animation/animation_demo.dart';
 import 'package:ninghao_flutter/pages/basic_demo.dart';
 import 'package:ninghao_flutter/pages/form_demo.dart';
 import 'package:ninghao_flutter/pages/sliver_demo.dart';
@@ -17,6 +18,12 @@ import 'pages/form_demo.dart';
  import 'pages/bottom_sheetDemo.dart';
  import 'pages/expansion_panel_demo.dart';
  import 'pages/chip_demo.dart';
+ import 'pages/state_manager_demo.dart';
+
+ import 'pages/rxdart/rxdart_demo.dart';
+  import 'pages/http/http_demo.dart';
+  import 'pages/expansion_panel_demo.dart';
+  import 'pages/animation/animation_demo2.dart';
 
 
 
@@ -39,8 +46,14 @@ class App extends StatelessWidget {
         // initialRoute: "/form",
 //        initialRoute:  "/button",
 //         initialRoute: "/bottom_sheet",
-          // initialRoute: "/expansion_panel_demo",
-            initialRoute: "/chip_demo",
+          // initialRoute: "/expansion_panel_demo",    
+            // initialRoute: "/chip_demo",
+            // initialRoute: "/statemanager_model_demo",
+
+        //  initialRoute: "/rxdart",    
+        //  initialRoute: "/http",  
+        //  initialRoute: "/animation",  
+         initialRoute: "/animation2",  
 
       //initialRoute: "/", 这句话，是跟home是有抵触的，所有在使用的时候，不能同时使用。
       //  home:  RoutesDemo(),
@@ -59,7 +72,17 @@ class App extends StatelessWidget {
         //  "/expansion_panel_demo":(context) =>Expansion_Pane(),
 
         //chip小碎片的学习
-        "/chip_demo":(context)=>ChipDemo(),
+        // "/chip_demo":(context)=>ChipDemo(),
+        // "/statemanager_model_demo":(context)=>StateManageDemo(),
+
+        //rxdart的学习
+        "/rxdart":(context)=>RxDartDemo(),
+        "/http":(context)=>HttpDemo(),
+
+        //  "/animation":(context)=>AnimationDemo(),
+
+     "/animation2":(context)=>AnimationDemo2(),
+
 
         //  "/":  (context)=> Page(title: "AAAAA",),
         //  "/about":( context)=>Page(title: "AAAAA",)
